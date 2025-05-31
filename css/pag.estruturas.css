@@ -1,0 +1,351 @@
+@charset "UTF-8";
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+
+* {
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+    font-family:"poppins";
+}
+
+body {
+    background-color: #ECF0F1;
+    text-align: center;
+    color: #34495E;
+}
+
+/*Cabeça do site*/
+header {
+    background-image: url(../imagens/img.teste.jpg);
+    background-position: center;
+    background-attachment: fixed;
+    background-size: cover;
+    height: 100vh;
+    transition: opacity 3s, filter 4s;
+    color: white;
+
+}
+div.cinza {
+    background-color:rgba(0, 0, 0, 0.238);
+    height: 100%;
+}
+
+.layout {
+    display: flex;
+  }
+
+main {
+    flex-grow: 1;
+    padding: 20px;
+  }
+/* estilo da barra menu */
+nav.menu-lateral {
+    width: 80px;
+    height: 100%;
+    background-color: #2980B9;
+    box-shadow: 3px 0 0 #F39C12;
+    position: fixed;
+    top: 0;
+    left: 0;
+    overflow: hidden;
+    transition: width 0.5s ease-in-out;
+    flex-shrink: 0;
+    z-index: 999;
+}
+
+nav.menu-lateral.expandir {
+    width: 300px;
+}
+
+nav.menu-lateral ul {
+    padding-top: 70px;
+}
+
+.btn-expandir {
+    margin-left: 2px;
+    position: absolute;
+    padding: 15px;
+    color: #ffff;
+}
+
+nav.menu-lateral.expandir .txt-link {
+    margin-left: 40px;
+}
+
+.btn-expandir>i {
+    font-size: 32px;
+    cursor: pointer;
+}
+
+.header_h2 {
+    color: #3498DB;
+    font-size: 45px;
+    padding-top: 15vh;
+    text-shadow: 2px 3px 4px rgba(0, 0, 0, 0.7);
+}
+
+.paragrafo_header {
+    font-size: 22px;
+    margin: 60px auto;
+    width: 88%;
+}
+
+.paragrafo p strong {
+    color: #F39C12;
+} 
+
+nav.menu-lateral {
+    width: 80px;
+    height: 100%;
+    background-color: #2980B9;
+    box-shadow: 3px 0 0 #F39C12;
+    position: fixed;
+    top: 0;
+    left: 0;
+    overflow: hidden;
+    transition: width 0.5s ease-in-out;
+}
+
+nav.menu-lateral.expandir {
+    width: 300px;
+}
+
+.btn-expandir {
+    margin-left: 2px;
+    color: #ffff;
+    padding: 15px;
+}
+
+nav.menu-lateral.expandir .txt-link {
+    margin-left: 40px;
+}
+
+.btn-expandir>i {
+    font-size: 32px;
+    cursor: pointer;
+}
+
+/* estilização da lista */
+ul {
+    height: 100%;
+    list-style-type: none;
+}
+
+ul li.item-menu {
+    transition: width .2s ease-in-out;
+}
+
+ul li.ativo>a>span.icon {
+    color: #ffff;
+}
+
+ul li.item-menu:hover {
+    background-color: #F39C12;
+}
+
+ul li.item-menu a {
+    display: flex;
+    color: #ffff;
+    text-decoration: none;
+    font-size: 20px;
+    padding: 20px 4%;
+}
+
+ul li.item-menu a .txt-link {
+    font-size: 12pt;
+    color: white;
+    margin-left: 70px;
+    font-weight: 400;
+}
+
+ul li.item-menu a .icon>i {
+    font-size: 25px;
+    display: block;
+    margin: 0px 60%;
+    opacity: 1;
+}
+
+/*Corpo do site*/
+.texto1 {
+    text-align: center;
+}
+
+.texto2 p {
+    font-size: 1.2vw;
+    margin: 40px;
+    text-align: justify;
+}
+
+.texto2 {
+    background-color: white;
+    max-width: 1200px;
+    min-width: 300px;
+    height: 30%;
+    margin: auto;
+    border-radius: 15px 15px 15px 15px;
+
+}
+
+.paragrafo {
+    width: 50%;
+    margin-top: -100px;
+}
+
+.requisitos p{
+    font-weight: 500;
+}
+
+.img_mulher {
+    width: 50%;
+    max-width: 100%;
+    height: auto;
+    margin: 0 auto;
+    border-radius: 0px 6px 6px 0px;
+    /* border-radius: 0px 6px 6px 0px; */
+}
+
+.card {
+    display: flex;
+    gap: 50px;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+    padding: 10px;
+}
+
+
+section img {
+    display: block;
+    width: 348px;
+    border-radius: 20px 20px 0 0;
+}
+
+h1, .requisitos {
+    color: #3498DB;
+}
+
+section {
+    margin-top: 100px;
+    border-radius: 20px;
+    background-color: white;
+    width: 348px;
+    text-align: center;
+    opacity: 0;
+    cursor: pointer;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    transition: all 0.4s;
+}
+
+
+section:hover {
+    opacity: 1;
+    transform: scale(1.0);
+}
+
+
+.card h1 {
+    margin-top: 12px;
+    text-align: center;
+    font-size: 25px;
+}
+
+.card p {
+    margin-top: -1px;
+    text-align: justify;
+    padding: 20px;
+    font-size: 18px;
+}
+
+
+.sub_titulo {
+    font-size: 45px;
+    color: white;
+    text-align: center;
+}
+
+/* Estilização co card com a Imagem */
+.texto2 h2 {
+    margin-top: 13vh;
+    color: #3498DB;
+}
+
+.texto2 {
+    margin-top: 120px;
+    display: flex;
+    font-size: 30px;
+    color: black;
+    font-weight: 500;
+}
+
+.paragrafo p{
+    margin-bottom: -90px;
+}
+a:hover {
+    color: black;
+}
+
+.card section:hover {
+    transform: scale(1.09);
+}
+
+.element_aparece {
+    opacity: 1;
+    filter: blur(0);
+    transform: translateX(0);
+}
+
+header.element_aparece {
+    opacity: 1;
+    transform: none;
+}
+
+.requisitos a {
+    text-decoration: none;
+    color: black;
+}
+
+
+/*footer do site*/
+.site {
+    background-color: #ECF0F1;
+    letter-spacing: 1px;
+    height: 130px;
+    text-align: center;
+}
+
+.pe {
+    margin-top: 35px;
+    color: #F39C12;
+    margin-left: 20px;
+}
+
+footer p {
+    color: #3498DB;
+}
+
+footer span {
+    color: #3498DB;
+}
+
+.linha {
+    margin: 20px 70px 20px 70px;
+}
+
+.linha hr {
+    border: 0;
+    border-top: 2px solid #F39C12;
+    margin: 20px 70px 20px 70px;
+}
+
+@media (max-width: 768px) {
+
+    header,
+    footer {
+        padding: 10px;
+    }
+
+    .requisitos {
+        padding: 15px;
+    }
+}
+

@@ -1,0 +1,215 @@
+@charset "UTF-8";
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    background-color: #ECF0F1;
+    color: #2980B9;
+}
+
+header {
+    margin-bottom: 50px;
+    margin-left: 100px;
+    text-align: center;
+    padding: 50px 20px;
+    background-color: #ECF0F1;
+    color: #2980B9;
+    font-size: 2.5rem;
+    text-shadow: 1px 2px 3px rgba(0, 0, 0, 0.2);
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.05);
+}
+
+.tamanho-btn {
+    font-size: 2rem;
+    cursor: pointer;
+}
+
+
+/* estilo da barra menu */
+nav.menu-lateral {
+    width: 80px;
+    height: 100%;
+    background-color: #2980B9;
+    box-shadow: 3px 0 0 #F39C12;
+    position: fixed;
+    top: 0;
+    left: 0;
+    overflow: hidden;
+    transition: width 0.5s ease-in-out;
+}
+
+nav.menu-lateral.expandir {
+    width: 300px;
+}
+
+nav.menu-lateral ul {
+    padding-top: 70px;
+}
+
+.btn-expandir {
+    margin-left: 2px;
+    position: absolute;
+    padding: 15px;
+    color: #ffff;
+}
+
+nav.menu-lateral.expandir .txt-link {
+    margin-left: 40px;
+}
+
+.btn-expandir>i {
+    font-size: 32px;
+    cursor: pointer;
+}
+
+/* estilização da lista */
+ul {
+    height: 100%;
+    list-style-type: none;
+}
+
+ul li.item-menu {
+    transition: width .2s ease-in-out;
+}
+
+ul li.ativo>a>span.icon {
+    color: #ffff;
+}
+
+ul li.item-menu:hover {
+    background-color: #F39C12;
+}
+
+ul li.item-menu a {
+    display: flex;
+    color: #ffff;
+    text-decoration: none;
+    font-size: 20px;
+    padding: 20px 4%;
+}
+
+ul li.item-menu a .txt-link {
+    font-size: 12pt;
+    color: white;
+    margin-left: 70px;
+}
+
+ul li.item-menu a .icon>i {
+    font-size: 25px;
+    display: block;
+    margin: 0px 60%;
+    opacity: 1;
+}
+
+main {
+    margin-left: 100px;
+    padding: 40px 20px;
+}
+
+/* Título das dicas */
+.h2_Dicas {
+    font-size: 1.8rem;
+    background-color: #fff;
+    color: #2980B9;
+    padding: 15px 30px;
+    border-radius: 20px;
+    margin: 60px auto;
+    width: fit-content;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    font-family: 'Times New Roman', Times, serif;
+    text-shadow: 1px 1px 2px rgba(253, 179, 6, 0.3);
+}
+
+/* Blocos de vídeos */
+.bloco_videos,
+.bloco_videos2 {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 30px;
+    margin-bottom: 60px;
+}
+
+.video_section {
+    width: 100%;
+    max-width: 430px;
+    height: auto;
+    text-align: center;
+    margin-bottom: 50px;
+}
+
+.video_section p {
+    font-size: 20px;
+    margin-top: 10px;
+    font-weight: bold;
+    color: #2C3E50;
+}
+
+/* Estilo dos iframes */
+iframe {
+    width: 100%;
+    max-width: 450px;
+    height: 250px;
+    border-radius: 10px;
+    transition: transform 0.3s;
+}
+
+iframe:hover {
+    transform: scale(1.05);
+}
+
+/* footer*/
+.site {
+    background-color: #ECF0F1;
+    letter-spacing: 1px;
+    height: 130px;
+    margin-left: 590px;
+    padding-top: 20px;
+}
+
+.pe {
+    color: #2980B9;
+    margin-left: 130px;
+}
+
+footer span {
+    color: rgb(204, 119, 7);
+}
+
+.linha {
+    width: 100%;
+    max-width: 1000px;
+    margin-left: -250px;
+    margin-right: auto;
+    margin-bottom: 15px;
+    margin-top: 10px;
+   
+}
+
+.linha hr {
+    border: 0;
+    border-top: 2px solid #F39C12;
+    margin: 20px 70px 20px 70px;
+}
+
+/* Responsivo */
+@media (max-width: 768px) {
+    main {
+        margin-left: 90px;
+    }
+
+    .bloco_videos,
+    .bloco_videos2 {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    iframe {
+        max-width: 100%;
+    }
+}

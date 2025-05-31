@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="stylesheet" href="cadastro.css">
+    <title>Cadastro</title>
+</head>
+
+
+<body>
+
+    <form id="form" action="{% url  'listagem_usuarios' %}" method = "post">
+        {% csrf_token %}
+        <div>
+            <p class="p-cadastre-se">Cadastre-se</p>
+            <p class="p-preencher">Preencha para continuar</p>
+        </div>
+
+        <div class="p1">
+            <p>
+                <label for="inome" class="labelinput">Nome:</label>
+                <input type="text" name="nome" id="inome" class="inputNome_Email" placeholder="Digite o seu nome"
+                    required>
+            </p>
+
+            <p>
+                <label for="iemail" class="labelinput">E-mail:</label>
+                <input type="email" name="email" id="iemail" class="inputNome_Email" placeholder="Digite o seu e-mail"
+                    required>
+            </p>
+
+            <p>
+                <label for="data" class="labelinput">Data de Nascimento:</label> <br>
+                <input type="date" name="dtnasc" id="data" class="inputdata" required>
+            </p>
+
+            <p class="senha">
+                <label for="idsenha">Senha:</label>
+                <input type="password" name="senha" id="idsenha" class="inputsenha" placeholder="Digite a senha"
+                    required>
+
+                <i class="fas fa-eye" id="toggleIconeRevelaSenha"></i>
+
+            </p>
+        </div>
+
+        <div>
+            <p class="p2">Sexo:
+                <br><input type="radio" name="sexo" id="masc" value="masculino">
+                <label for="masc">Masculino</label><br>
+
+                <input type="radio" name="sexo" id="fem" value="feminino">
+                <label for="fem">Feminino</label> <br>
+
+                <input type="radio" name="sexo" id="outros" value="outros">
+                <label for="outros">Outros</label>
+            </p>
+
+            <p class="login">
+                <strong>Já tem conta?</strong>
+                <a href="pag_login.html" target="_self" rel="next"><strong>
+                        Faça login!</strong></a>
+            </p>
+
+        </div>
+
+        <button class="butao" type="submit" id="botao">Cadastrar</button>
+    </form>
+
+    <script src="./cadastro_interativo.js"></script>
+
+</body>
+
+</html>

@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="stylesheet" href="./cadastro.css">
+    <title>Cadastro</title>
+</head>
+
+<body>
+    <div class = "container"
+     <table class="table table-bordered table-striped ">
+         <tr>
+            <th>id</th>
+            <th>nome</th>
+            <th>email</th>
+            <th>sexo</th>
+            <th>dn</th>
+        </tr>
+        {% for usuarios in usuarios %}
+        <tr>
+            <td>{{ usuarios.id_usuario }}</td>
+            <td>{{ usuarios.nome }}</td>
+            <td>{{ usuarios.email }}</td>
+            <td>{{ usuarios.sexo }}</td>
+            <td>{{ usuarios.dn}}</td>
+
+        </tr>
+        {% endfor %}
+     </table>
+    </div>
+
+<script src="./cadastro_interativo.js"></script>
+ 
+    
+ </body>

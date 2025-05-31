@@ -1,0 +1,247 @@
+@charset "UTF-8";
+
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+
+
+* {
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: #ECF0F1;
+    text-align: center;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    margin-bottom: 40px;
+}
+
+header {
+    background-image: url(./);
+    text-align: center;
+    font-size: 60px;
+    margin-bottom: 5px;
+    margin-top: 30px;
+    opacity: 0;
+    /*  header começa invisível */
+    transition: opacity 3s, filter 4s;
+    color:  #2980B9;
+}
+
+.layout {
+    display: flex;
+  }
+
+main {
+    flex-grow: 1;
+    padding: 20px;
+  }
+
+/* estilo da barra menu */
+nav.menu-lateral {
+    width: 80px;
+    height: 100%;
+    background-color: #2980B9;
+    box-shadow: 3px 0 0 #F39C12;
+    position: fixed;
+    top: 0;
+    left: 0;
+    overflow: hidden;
+    transition: width 0.5s ease-in-out;
+    flex-shrink: 0;
+    z-index: 999;
+}
+
+nav.menu-lateral.expandir {
+    width: 300px;
+}
+
+nav.menu-lateral ul {
+    padding-top: 70px;
+}
+
+.btn-expandir {
+    margin-left: 2px;
+    position: absolute;
+    padding: 15px;
+    color: #ffff;
+}
+
+nav.menu-lateral.expandir .txt-link {
+    margin-left: 40px;
+}
+
+.btn-expandir>i {
+    font-size: 32px;
+    cursor: pointer;
+}
+
+/* estilização da lista */
+ul {
+    height: 100%;
+    list-style-type: none;
+}
+
+ul li.item-menu {
+    transition: width .2s ease-in-out;
+}
+
+ul li.ativo>a>span.icon {
+    color: #ffff;
+}
+
+ul li.item-menu:hover {
+    background-color: #F39C12;
+}
+
+ul li.item-menu a {
+    display: flex;
+    color: #ffff;
+    text-decoration: none;
+    font-size: 20px;
+    padding: 20px 4%;
+}
+
+ul li.item-menu a .txt-link {
+    font-size: 12pt;
+    color: white;
+    margin-left: 70px;
+}
+
+ul li.item-menu a .icon>i {
+    font-size: 25px;
+    display: block;
+    margin: 0px 60%;
+    opacity: 1;
+}
+
+main {
+    margin-left: 100px;
+    padding: 40px 20px;
+}
+
+/*estilização dos cards*/
+
+.card {
+    display: flex;
+    gap: 50px;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+}
+
+.card h1 {
+    margin-top: 18px;
+    text-align: center;
+}
+
+.card p {
+    margin-top: 10px;
+    text-align: justify;
+    padding: 20px;
+    font-size: 19px;
+}
+
+section img {
+    display: block;
+    width: 350px;
+    border-radius: 20px 20px 0 0;
+}
+
+section {
+    margin-top: 100px;
+    border-radius: 20px;
+    background-color: white;
+    height: auto;
+    width: 350px;
+    text-align: center;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    transition: 0.4s ease;
+    cursor: pointer;
+}
+
+/* Site dos temas*/
+
+.card img{
+    margin: auto;
+    width: 350px;
+
+}
+
+.requisitos .ambiente{
+    text-align: center;
+    font-size: 25px;
+    margin-bottom: 5px;
+}
+
+/* Site dos temas*/
+
+.card section:hover {
+    transform: scale(1.10);
+}
+
+.card section h1 {
+    font-weight: bolder;
+    font-size: 2em;
+}
+
+.element_aparece {
+    opacity: 1;
+    filter: blur(0);
+    transform: translateX(0);
+}
+
+.requisitos a {
+    text-decoration: none;
+    color: black;
+    height: auto;
+}
+
+/*footer do site*/
+.site {
+    background-color: #ECF0F1;
+    letter-spacing: 1px;
+    height: 90px;
+    text-align: center;
+    color: #2980B9;
+    margin-bottom: -10px;
+    margin-left: 80px ;
+}
+
+.pe {
+    margin-top: 25px;
+    color: #2980B9;
+    margin-left: 20px;
+    margin-bottom: -5px;
+    font-size: 16px;
+}
+
+footer span {
+    color: rgb(204, 119, 7);
+}
+
+.linha {
+    margin: 20px 70px 20px 70px;
+}
+
+.linha hr {
+    border: 0;
+    border-top: 2px solid #F39C12;
+    margin: 20px 70px 20px 70px;
+}
+
+/* Responsivo */
+@media (max-width: 768px) {
+    main {
+        margin-left: 90px;
+    }
+
+    .bloco_videos,
+    .bloco_videos2 {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    iframe {
+        max-width: 100%;
+    }
+}
