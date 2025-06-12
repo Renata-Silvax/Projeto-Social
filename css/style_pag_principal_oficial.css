@@ -303,12 +303,12 @@ footer span {
 
 
 @media (max-width: 768px) {
-    nav.menu-lateral {
-        width: 60px;
-    }
+    /* nav.menu-lateral {
+        margin-left: 5px;
+    } */
 
     .page {
-        margin-left: 60px;
+        width: 100%;
     }
 
     .container {
